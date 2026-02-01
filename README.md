@@ -43,11 +43,12 @@ The command used is: `docker build -t <tag-for-image> .`
 - `.` --> build from current directory in which Dockerfile is located
 
 ## Run containers using images
-The command used: `docker run -d -p 3000:3000 --rm --resstart always <image-id or image-name>`
+The command used: `docker run -d --name <container-name>-p 3000:3000 --rm --resstart always <image-id or image-name>`
 - `-d` --> **detached mode** run the container in background or detach the container from current working shell.
 - `-p 3000:80` --> **port binding** bind the port 3000 of host machine with port 80 of Container.
 - `--rm` --> remove or delete the container when it is stopped
 - `--restart always` --> run the container on boot.
+- `--name` --> Assign the name to container.
 
 ## Managing Container and images
 - To list images use : `docker images`
